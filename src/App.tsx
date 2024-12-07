@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Modal from './components/Modal';
 import TableModal from './components/TableModal';
 import { topicsData, TopicData, SchoolPopulationData } from './data/topicsData';
+import Footer from './components/Footer';
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState<TopicData | null>(null);
@@ -14,7 +15,8 @@ function App() {
   };
 
   return (
-    <div className="h-screen bg-landingpage bg-no-repeat bg-cover bg-center opacity-100 z-10">
+    <div>
+    <div className="h-screen bg-landingpage bg-no-repeat bg-cover bg-center opacity-100 z-10 w-full">
       <div className="fixed inset-0 z-10 bg-cover bg-center bg-no-repeat bg-landing-page opacity-100" />
 
       <Navbar onButtonClick={handleButtonClick} />
@@ -45,6 +47,8 @@ function App() {
           data={selectedTopic}
         />
       )}
+    </div>
+    <Footer />
     </div>
   );
 }

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'landingpage': "url('/public/ELBg.jpg')",
+        'landingpage': "url('/ELBg.jpg')",
       },
     },
   },
